@@ -13,3 +13,91 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+ body{
+ 	background-image: url("dark-blackboard.png");
+ }
+ #loginDiv{
+ 	width: 605px;
+ 	margin: 0 auto;
+ 	margin-top: 80px;
+ }
+ .signInField {
+  	display: inline-block;
+ }
+ .signInField input{
+ 	display: inline-block;
+ 	font-size: 1.7em;
+ 	margin: 10px;
+ 	background-color: inherit;
+ 	color: #e9e9e9;
+ }
+ #logText{
+ 	color:#e9e9e9;
+ 	font-size: 1.7em;
+
+ 	margin-bottom: 25px;
+ }
+ #regLink{
+ 	font-size: 1.3em;
+ 	margin-top: 60px;
+ 	text-align: center;
+ 	color: purple;
+ }
+ #regLink a{
+ 	color: #e9e9e9;
+ 	text-shadow: 1px 0px purple;
+ 	text-decoration: none;
+ }
+ #regLink a:hover{
+ 	color: #e9e9e9;
+ 	text-decoration: underline;
+ }
+ #signin{
+ 	font-size: 1.7em;
+ 	background-color: purple;
+ 	border: 3px outset purple;
+ 	position: relative;
+ 	left: 250px;
+ 	margin-top: 30px;
+ }
+ #wrapper{
+ 	width:600px;
+ 	margin: 0 auto;
+ }
+ #cbox2{
+ 	width: 20px;
+ 	height: 15px;
+ 	margin-top: 20px;
+ }
+ #cboxText{
+ 	font-size: 1.3em;
+ 	color: purple;
+ 	margin-top: 20px;
+ }
+ #regText{
+ 	color: purple;
+ 	font-size: 1.7em;
+ }
+ .formpart{
+ 	width: 700px;
+ }
+.formpart input{
+ 	font-size: 1.7em;
+ 	margin: 10px;
+ 	background-color: inherit;
+ 	color: #e9e9e9;
+}
+.formpart>div{
+	display: inline-block;
+}
+#regPart3 div{
+	display: block;
+}
+#regPart3{
+	color: #e9e9e9;
+	width: 270px;
+	margin: 0 auto;
+}

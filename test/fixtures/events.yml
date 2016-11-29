@@ -1,11 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  group: one
+  title: MyString
+  date: 2016-11-15 15:08:13
+  location: MyString
   description: MyString
   image: 
 
 two:
-  name: MyString
+  group: two
+  title: MyString
+  date: 2016-11-15 15:08:13
+  location: MyString
   description: MyString
   image: 

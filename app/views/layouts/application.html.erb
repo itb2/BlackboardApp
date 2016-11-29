@@ -3,14 +3,17 @@
   <head>
     <title>BlackboardApp</title>
     <%= csrf_meta_tags %>
+    <% flash.each do |key, value| %>
+	    <div class="alert alert-<%= key %>">
+	      <%= value %>
+	    </div>
+	<% end %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
-  	<h1>Blackboard APP!</h1>
     <%= yield %>
   </body>
 </html>

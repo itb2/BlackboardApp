@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  group: one
+  body: MyString
+  event: one
+  approved: false
+  image: 
+
+two:
+  user: two
+  group: two
+  body: MyString
+  event: two
+  approved: false
+  image: 

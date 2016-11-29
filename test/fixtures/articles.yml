@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  group: one
+  user: one
+  text: MyString
+  urlink: MyString
+
+two:
+  group: two
+  user: two
+  text: MyString
+  urlink: MyString

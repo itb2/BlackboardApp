@@ -4,6 +4,35 @@
 	<title>BlackBoard: Welcome!</title>
 </head>
 <body>
+<div style="width: 600px; margin: 0 auto; margin-top: 30px">
+	<%=image_tag "BBlogo.png",  height:"90", width:'700' %>
+</div>
+<div style=" width: 100%; height: 30px; border-bottom: 2px solid purple;"></div>
+
+
+<div id='wrapper'>
+
+	<div id="loginDiv">
+		<p id="logText">Log In:</p>
+		<form action="/users/sessions/new">
+			<div>
+				<div class="signInField">
+				<input name = 'netid', placeholder='Net ID', required>
+				</div>
+				<div class="signInField">
+				<input name='password', placeholder='Password', required>
+				</div>
+				<input type="checkbox" id="cbox2"><label id="cboxText">Remember Me</label>
+			</div>
+			<button type="submit" id= "signin">Sign In</button>
+		</form>
+	</div>
+
+	<div id="regDiv">
+		<p id="regLink">Don't have an account? <a href='/users/sign_up'>Click Here To Register >> </a></p>
+	</div>
+
+	</div>
 
 </body>
 </html>
