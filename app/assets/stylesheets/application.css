@@ -64,7 +64,7 @@
  	margin-top: 30px;
  }
  #wrapper{
- 	width:600px;
+ 	width:700px;
  	margin: 0 auto;
  }
  #cbox2{
@@ -100,4 +100,79 @@
 	color: #e9e9e9;
 	width: 270px;
 	margin: 0 auto;
+}
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+#canvas{
+	background-color: #e9e9e9;
+
+}
+#greeting{
+	color: white
+	;
+}
+a{
+	color: white;
+}
+a:hover{
+	color: purple;
+}
+#myFieldId{
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#myFieldId:focus {
+    width: 100%;
+
+}
+#feedWrap{
+    height:1000px;
+    width: 98%;
+    margin:0 auto;
+}
+#col1,
+#col2,
+#col3{
+    display: inline-block;
+    border: 2px solid purple;
+    height: 100%;
+    vertical-align: top;
+
+}
+#col1,
+#col3{
+    width: 26%;
+}
+#col2{
+    width: 45%;
+}
+#enter{
+    font-size: 4em;
+    background-color: inherit;
+    border: 5px outset purple;
+    color: lightgray;
+    font-family: "helvetica";
 }

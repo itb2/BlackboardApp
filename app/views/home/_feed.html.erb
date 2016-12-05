@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blackboard: Feed</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<div style="margin-right: 50px;width: 360px; margin-top: 30px; display: inline-block; border-right: 2px solid purple">
+	  <%=image_tag "BBlogo.png",  height:"60", width:'380' %>
+	</div>
+	<div style="display: inline-block; width: 330px; margin-right: 50px;">
+		<input  id="myFieldId" type="text" name="search" placeholder="Search..." onfocus="myFunction()">
+	</div>
+	<div style="display: inline-block; width: 400px; color:white;">
+		<div style="display: inline-block; ">
+			
+			<!--  insert user photo icon here -->
+			<%= @user.fname %>
+			
+		</div>
+		<div style="display: inline-block;">
+			<% Member.where("user_id", current_user.id).each do |x| %>
+				<div>
+					<%= x.group_id %>
+				</div>
+			<%end%>	
+
+		</div>
+	</div>
+	<div style=" width: 100%; height: 30px; border-bottom: 2px solid purple; margin-bottom: 20px;"></div>
+
+	<div id="feedWrap">
+
+		<div id="col1">
+		</div>
+
+		<div id="col2">
+			<div id="poster">
+				<form  method="post" action='/posts' style="color: black">
+				<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+				<div>
+				<textarea class="posterBox" name="post" id="postBox" maxlength="150" placeholder="Type your post here... " required></textarea>
+				</div>
+	 			<button type=submit>Post</button>
+			</form>
+			</div>
+			<div id="posts">
+				<% (Post.all).reverse.each do |x| %>
+				<% if x.user_id == nil %>
+					<% @g = Group.find(x.group_id) %>
+				<% else %>
+					<% @p = UserInfo.where(user_id, x.user_id).first %>
+				<%end%>
+					<div>
+						<div>
+							<% if x.user_id == nil %>
+								<% @g = Group.find(x.group_id) %>
+								<h2><%= @g.name %></h2>
+							<% else %>
+								<% @p = UserInfo.where(user_id, x.user_id).first %>
+								<h2><%= @p.fname %></h2>
+							<%end%>
+						</div>
+						<div>
+					  		
+					  		<p><%= x.body %></p>
+					  		
+					  		<p style="display: inline-block;  margin-left: 10px;"><%= x.created_at %></p>
+					  	</div>
+				  	</div>
+				<% end %>
+			</div>
+		</div>
+
+		<div id="col3">
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		function myFunction(){
+			$('#myFieldId').attr('placeholder', 'Search for Users or Groups');
+		}
+	</script>
+</body>
+</html>
